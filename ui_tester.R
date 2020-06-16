@@ -592,15 +592,6 @@ iDEPversion,
     # sidebar of DEG3 --------------------------------------------------------------------------------
       sidebarPanel(
         h5("Identifying Differential Expressed Genes (DEGs). See next tab for details."),
-        conditionalPanel("input.dataFileFormat == 1",
-          selectInput("CountsDEGMethod", "Method:", 
-                      choices = list("DESeq2"      = 3,
-                                     "limma-voom"  = 2,
-                                     "limma-trend" = 1),
-                      selected = 3)        
-          ,tags$style(type='text/css', "#CountsDEGMethod { width:100%;   margin-top:-12px}")
-        )
-    
         ,conditionalPanel( "input.dataFileFormat == 2", h5("Using the limma package")        )        
         ,fluidRow(
           column(5,numericInput("limmaPval",  # FDR cutoff

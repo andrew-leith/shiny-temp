@@ -591,7 +591,7 @@ iDEPversion,
   
     # sidebar of DEG3 --------------------------------------------------------------------------------
       sidebarPanel(
-        h5("Cook's Distance Plot."),
+        h5("Cook's Distance."),
         ,conditionalPanel( "input.dataFileFormat == 2", h5("Using the limma package")        )        
         ,fluidRow(
           column(5,numericInput("limmaPval",  # FDR cutoff
@@ -634,9 +634,7 @@ iDEPversion,
       mainPanel(
         plotOutput('sigGeneStats')
         ,br(),br(),
-        ,h4("Numbers of differentially expressed genes for all comparisons.
-           \"B-A\" means B vs. A. Interaction terms start with \"I:\" ")
-        ,h4("Numbers of differentially expressed genes for all comparisons.
+        h4("Numbers of differentially expressed genes for all comparisons.
            \"B-A\" means B vs. A. Interaction terms start with \"I:\" ")
         ,tableOutput('sigGeneStatsTable')
     

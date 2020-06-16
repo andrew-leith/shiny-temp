@@ -591,7 +591,7 @@ iDEPversion,
   
     # sidebar of DEG3 --------------------------------------------------------------------------------
       sidebarPanel(
-        h5("Identifying Differential Expressed Genes (DEGs). See next tab for details."),
+        h5("Placeholder for any Cook's widget options that may be needed."),
 
     
         width = 4

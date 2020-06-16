@@ -590,41 +590,7 @@ iDEPversion,
     sidebarLayout(
   
     # sidebar of DEG3 --------------------------------------------------------------------------------
-      sidebarPanel(
-        h5("Cook's Distance Plot Parameters."),
-        ,conditionalPanel( "input.dataFileFormat == 2", h5("Using the limma package")        )        
-        ,fluidRow(
-          column(5,numericInput("limmaPval",  # FDR cutoff
-                 label = h5("FDR cutoff"), 
-                 value = 0.1,
-                 min   = 1e-5,
-                 max   = 1,
-                 step  =.05)  )
-          ,column(7, numericInput("limmaFC",   # fold change cutoff
-                  label = h5("Min fold change"),
-                  value = 2,
-                  min   = 1,
-                  max   = 100,
-                  step  = 0.5) )
-        ) # fluidRow
-        ,tags$style(type='text/css', "#limmaPval { width:100%;   margin-top:-12px}")
-        ,tags$style(type='text/css', "#limmaFC { width:100%;   margin-top:-12px}")
-        ,actionButton("modelAndComparisons", "Select factors & comparisons")
-        ,tags$head(tags$style("#modelAndComparisons{color: blue;font-size: 15px;}"))        
-        ,br(),br() 
-        ,br(),fluidRow(          
-        column(8, downloadButton('downloadGeneListsGMT', 'Gene lists') ) )
-        ,br()
-        ,fluidRow(
-           column(8, downloadButton('download.DEG.data', 'FDR & fold-changes for all genes') )
-        )
-        ,downloadButton('downloadSigGeneStats', 'Figure')
-        ,br(),h4( textOutput("textLimma") )
-        ,tags$head(tags$style("#textLimma{color: blue;font-size: 15px;}"))  
-        ,a(h5("?",align = "right"), href="https://idepsite.wordpress.com/degs/",target="_blank")
-    
-        , width = 4
-      ), # end of sidebar
+
   
             
       mainPanel(

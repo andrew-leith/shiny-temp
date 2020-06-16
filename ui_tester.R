@@ -586,7 +586,7 @@ iDEPversion,
 #================================================================================================== 
 #  DEG3: Differentially expressed gene 1
 #================================================================================================== 
-  ,tabPanel("DEG3",
+  ,tabPanel("Cook's Distance",
     sidebarLayout(
   
     # sidebar of DEG3 --------------------------------------------------------------------------------
@@ -603,6 +603,7 @@ iDEPversion,
         ,br(),br(),
         h4("Numbers of differentially expressed genes for all comparisons.
            \"B-A\" means B vs. A. Interaction terms start with \"I:\" ")
+        ,plot(c(1, 2, 3, 4), c(1, 2, 3, 4))
         ,tableOutput('sigGeneStatsTable')
     
         ,bsModal("modalExample", "Venn Diagram", "showVenn", size = "large",

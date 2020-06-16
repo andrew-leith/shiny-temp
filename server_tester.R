@@ -5729,7 +5729,7 @@ output$DownloadVenn <- downloadHandler(
 
 output$cookTest <- renderPlot({
 		if (is.null(input$file1)&& input$goButton == 0)   return(NULL)
-
+		isolate({ 
 		 
 		 p= plot(c(1, 2, 3, 4), c(1, 2, 3, 4))
 			

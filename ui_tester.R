@@ -590,7 +590,12 @@ iDEPversion,
     sidebarLayout(
   
     # sidebar of DEG3 --------------------------------------------------------------------------------
- # end of sidebar
+      sidebarPanel(
+        h5("Identifying Differential Expressed Genes (DEGs). See next tab for details."),
+
+    
+        width = 4
+      ), # end of sidebar
   
             
       mainPanel(

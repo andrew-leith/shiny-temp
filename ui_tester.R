@@ -584,7 +584,26 @@ iDEPversion,
     )  #sidebarLayout     
   ) #tabPanel
 
+,tabPanel("Cook",
+    sidebarLayout(
+  
+    # sidebar of DEG1 --------------------------------------------------------------------------------
+      sidebarPanel(
+        h5("Cook Sidebar.")
 
+    
+        , width = 4
+      ), # end of sidebar
+  
+            
+      mainPanel(
+      h4("Cook Plot"),
+      plotOutput('cookTest')
+        
+      
+      ) # mainPanel
+    )  #sidebarLayout     
+  ) #tabPanel
   
 #================================================================================================== 
 #  DEG2: Differentially expressed genes 2

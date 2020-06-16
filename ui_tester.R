@@ -641,8 +641,9 @@ iDEPversion,
   
             
       mainPanel(
-        plotOutput('cookTest')
+        plotOutput('sigGeneStats')
         ,br(),br(),
+        plotOutput('cookTest'),
         h4("Numbers of differentially expressed genes for all comparisons.
            \"B-A\" means B vs. A. Interaction terms start with \"I:\" ")
         ,tableOutput('sigGeneStatsTable')
